@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl"> 
+
+<head>
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no;user-scalable=0;" />
+    <title>صنگ صبور</title>
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+    <link rel="image_src" type="image/jpeg" href="static/images/moon.jpg" />
+    <link rel="stylesheet" type="text/css" href="static/CSS/styles.css" />
+    
+    <!-- Add Kurdish font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kurdish&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Noto Sans Kurdish', sans-serif; 
+        }
+    </style>
+    
+    <script>
+        
+        if (/Android/i.test(navigator.userAgent)) {
+          const html = document.getElementsByTagName('html');
+          html[0].style.background = '#111821';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="message">
+        <span class="message__text">شتێک بنوسە کە سترێست بۆ دروست دەکات.</span>
+    </div>
+    <div class="not-found">
+        Meditation not found
+    </div>
+    <div class="main-title title">
+        <div>صنگ صبور</div>
+        <div class="main-title__sub-title"> بەردەوامبە،سترێسەکانت فەرامۆش بکە.</div>
+        <br>
+        <div class="main-title__sub-title custom-message-username"></div>
+    </div>
+    <div class="main-star">
+        <div class="main-star__thought-wrapper">
+            <span class="main-star__thought-text"></span>
+        </div>
+    </div>
+    <div class="input-thought-wrapper">
+        <input disabled placeholder="چ شتێک بێزارت دەکات..؟" class="input__thought"></input>
+        <a href="#" class="button submit btn-enterthought"><span>بەردەوامبوون</span></a>
+    </div>
+    <div class="done title-done">
+        بەهیوام سترێست کەمبێتەوە،
+    </div>
+    <br>
+    <!-- Instagram Icon and Link -->
+    <div class="social-media">
+        <a href="https://www.instagram.com/siili_cinema/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" style="width: 15px; height: 15px;"/> 
+        </a>
+        <div style="color: pink; font-weight: bold;">siili_cinema</div>
+    </div>
+
+    <!-- Audio Autoplay -->
+    <audio class="audio" id="backgroundAudio" autoplay>
+        <source src="static/media/background.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        window.addEventListener('load', function () {
+            var audio = document.getElementById('backgroundAudio');
+            audio.play(); 
+            audio.muted = false; 
+
+           
+            audio.oncanplaythrough = function() {
+                audio.play();
+            };
+        });
+    </script>
+    
+    <script src='static/JS/jquery-1.11.2.min.js'></script>
+    <script src='static/JS/jquery.textfill.min.js'></script>
+    <script src='static/JS/d3.js' charset="utf-8"></script>
+    <script src='static/JS/d3methods.js'></script>
+    <script src='static/JS/jqueryMethods.js'></script>
+</body>
+
+</html>
